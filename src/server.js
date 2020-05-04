@@ -9,12 +9,12 @@ const cors = require('cors');
 const schema = require('./schema');
 
 const apolloServer = new ApolloServer({
-	schema: schema,
-	introspection: true,
-	playground: true,
-	context: async ({ res, req }) => {
-		return { res, req, user: {} };
-	},
+  schema: schema,
+  introspection: true,
+  playground: true,
+  context: async ({ res, req }) => {
+    return { res, req, user: {} };
+  },
 });
 
 const app = express();
@@ -27,8 +27,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 apolloServer.applyMiddleware({
-	app,
-	path: '/api',
+  app,
+  path: '/api',
   cors: false, // use express cors instead
 });
 

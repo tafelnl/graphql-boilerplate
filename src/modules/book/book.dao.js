@@ -6,7 +6,7 @@ module.exports = class BookDao extends ExampleDefaultDao {
   async listByTitle(title) {
     return this.db.book.find({
       title: title
-		}, true, true);
+    }, true, true);
   }
 
 };

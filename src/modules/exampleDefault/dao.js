@@ -44,38 +44,38 @@ const database = {
 
 module.exports = class ExampleDefaultDao {
 
-	constructor() {
-		let name = new.target.name;
-		if (new.target === ExampleDefaultDao) {
+  constructor() {
+    let name = new.target.name;
+    if (new.target === ExampleDefaultDao) {
       throw TypeError(`Cannot instantiate abstract class ${name}`);
     }
 
-		this.db = database;
+    this.db = database;
 
-		this.entityName = this.createTrueEntityName(name);
+    this.entityName = this.createTrueEntityName(name);
     this.entityKey = `${this.entityName}_id`;
-	}
+  }
 
-	createTrueEntityName(entityName) {
+  createTrueEntityName(entityName) {
 
     if (entityName.endsWith('Dao')) {
       entityName = entityName.substring(0, entityName.length - 3);
     }
 
-		let i = 0;
-		let char = '';
-		let outputEntityName = '';
-		while( i < entityName.length) {
-			char = entityName.charAt(i);
-			if(char !== '_' && char === char.toUpperCase() && i > 0 && entityName.charAt(i - 1) !== '_') {
-				char = '_' + char;
-			}
-			outputEntityName += char.toLowerCase();
-			i++;
-		}
-		return outputEntityName;
-	}
-
+    let i = 0;
+    let char = '';
+    let outputEntityName = '';
+    while( i < entityName.length) {
+      char = entityName.charAt(i);
+      if(char !== '_' && char === char.toUpperCase() && i > 0 && entityName.charAt(i - 1) !== '_') {
+        char = '_' + char;
+      }
+      outputEntityName += char.toLowerCase();
+      i++;
+    }
+    return outputEntityName;
+  }
+  
   async getById(id) {
     return this.find({
       [this.entityKey]: id

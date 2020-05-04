@@ -19,8 +19,8 @@ const typeDefFileEnd = '.graphql';
 const resolversFileEnd = '.resolvers.js';
 
 fs
-	.readdirSync(join(__dirname, modulesFolder))
-	.forEach((folder) => {
+  .readdirSync(join(__dirname, modulesFolder))
+  .forEach((folder) => {
     const path = join(__dirname, modulesFolder, folder);
     const isFolder = fs.lstatSync(path).isDirectory();
     if (isFolder) {
@@ -41,7 +41,7 @@ fs
           console.log('[GraphQL] Added ', file);
         });
     }
-	});
+  });
 
 const schema = makeExecutableSchema({
   typeDefs,
