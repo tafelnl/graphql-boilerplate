@@ -1,0 +1,30 @@
+type Book {
+  id: ID,
+  title: String
+  ranking: Int
+  stars: Int
+  featured: Boolean
+  shouldRead: Boolean
+  author: Author
+}
+
+input BooksInput {
+  title: String
+  ranking: Int
+  stars: Int
+  featured: Boolean
+  author_id: ID
+  # @QUESTION
+  # best way to search by author name?
+  # a join query for example seems ugly
+}
+
+extend type Query {
+  book(id: ID!): Book
+  books(input: BooksInput!): [Book]!
+  booksFeatured: [Book]!
+}
+
+extend type Mutation {
+  bookCreate: Book!
+}
