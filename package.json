@@ -8,7 +8,7 @@
   "main": "src/server.js",
   "scripts": {
     "postinstall": "link-module-alias",
-    "dev": "nodemon --exec \"npm run lint && babel-node src/server.js js, graphql\"",
+    "dev": "nodemon src/server.js --ext js,graphql --exec \"npm run lint && babel-node\"",
     "lint": "eslint src/**/*.js",
     "babel-node": "babel-node --presets=/*a*/"
   },
