@@ -8,7 +8,8 @@
   "main": "src/server.js",
   "scripts": {
     "postinstall": "link-module-alias",
-    "dev": "npm run format && nodemon src/server.js --ext js,graphql --exec \"npm run format && npm run lint && babel-node\"",
+    "dev": "npm run format && nodemon src/server.js --ext js,graphql --exec \"npm run check && npm run lint && babel-node\"",
+    "check": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint src/**/*.js",
     "babel-node": "babel-node --presets=/*a*/"
