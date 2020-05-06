@@ -16,5 +16,6 @@
 ## Usage
 
 - Every file ending with `.graphql` / `.resolvers.js` in the `modules` folder will automatically be bundled in the GraphQL schema (magic happens in `schema.js`)
+- `npm install`
 - `npm run dev`
 - Enjoy!
