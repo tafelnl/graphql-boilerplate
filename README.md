@@ -8,6 +8,7 @@
 
 - Babel (ES2020)
 - ESLint (babel-node as parser)
+- Prettier.io: code formatter
 - [`link-module-alias`](https://github.com/Rush/link-module-alias): Enables aliases
 - Module (domain) based setup
 - Clean console logs
