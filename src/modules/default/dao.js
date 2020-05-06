@@ -90,18 +90,20 @@ module.exports = class DefaultDao {
     return this.db[this.entityName][findMethod]((item) => {
       let match = true;
       for (let [key, value] of Object.entries(args)) {
-        if (item[key]) {
-          if (shallow && typeof item[key] === 'string') {
-            if (!item[key].startsWith(value)) {
-              match = false;
+        if (typeof value !== 'undefined') {
+          if (item[key]) {
+            if (shallow && typeof item[key] === 'string') {
+              if (!item[key].startsWith(value)) {
+                match = false;
+              }
+            } else {
+              if (item[key] != value) {
+                match = false;
+              }
             }
           } else {
-            if (item[key] != value) {
-              match = false;
-            }
+            match = false;
           }
-        } else {
-          match = false;
         }
       }
       return match;
