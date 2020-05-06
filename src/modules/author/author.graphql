@@ -1,4 +1,4 @@
 type Author {
-  id: ID,
+  id: ID
   name: String
 }

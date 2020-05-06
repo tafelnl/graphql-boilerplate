@@ -1,5 +1,5 @@
 type Book {
-  id: ID,
+  id: ID
   title: String
   ranking: Int
   stars: Int

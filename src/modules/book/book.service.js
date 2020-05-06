@@ -2,7 +2,6 @@ const BookDao = require('./book.dao');
 const AuthorService = require('~/modules/author/author.service');
 
 module.exports = class BookService {
-
   static async get(ctx, id) {
     const bookDao = new BookDao();
     return bookDao.getById(id);
@@ -15,9 +14,7 @@ module.exports = class BookService {
 
   static async listFeatured() {
     const bookDao = new BookDao();
-    return bookDao.find({
-      featured: true
-    }, true);
+    return bookDao.find({ featured: true }, true);
   }
 
   static async getAuthor(ctx, book) {
@@ -27,5 +24,4 @@ module.exports = class BookService {
     const author_id = book?.author_id;
     return AuthorService.get(ctx, author_id);
   }
-
-}
+};

@@ -22,7 +22,7 @@ const corsOptions = {
   origin: (origin, callback) => {
     callback(null, true);
   },
-  credentials: true
+  credentials: true,
 };
 app.use(cors(corsOptions));
 
@@ -35,7 +35,6 @@ apolloServer.applyMiddleware({
 const port = process.env.PORT || 4000;
 
 app.listen({ port }, () => {
-
   const ip = os.networkInterfaces()['Wi-Fi']?.[1]?.address;
 
   const bgGreen = (string) => {
@@ -53,7 +52,6 @@ app.listen({ port }, () => {
   - Local:   {cyan http://localhost:${port}${apolloServer.subscriptionsPath}}
   - Network: {cyan http://${ip}:${port}${apolloServer.subscriptionsPath}}
   `);
-
 });
 
 module.exports = app;

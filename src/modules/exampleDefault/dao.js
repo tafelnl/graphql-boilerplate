@@ -6,7 +6,7 @@ const database = {
       author_id: 1,
       ranking: 1,
       stars: 5,
-      featured: true
+      featured: true,
     },
     {
       book_id: 2,
@@ -14,7 +14,7 @@ const database = {
       author_id: 2,
       ranking: 2,
       stars: 5,
-      featured: false
+      featured: false,
     },
     {
       book_id: 3,
@@ -22,28 +22,27 @@ const database = {
       author_id: 3,
       ranking: 3,
       stars: 4,
-      featured: true
+      featured: true,
     },
   ],
   author: [
     {
       author_id: 1,
-      name: 'Marcel Proust'
+      name: 'Marcel Proust',
     },
     {
       author_id: 2,
-      name: 'James Joyce'
+      name: 'James Joyce',
     },
     {
       author_id: 3,
-      name: 'Miguel de Cervantes'
-    }
-  ]
+      name: 'Miguel de Cervantes',
+    },
+  ],
 };
 // source: https://thegreatestbooks.org/
 
 module.exports = class ExampleDefaultDao {
-
   constructor() {
     let name = new.target.name;
     if (new.target === ExampleDefaultDao) {
@@ -57,7 +56,6 @@ module.exports = class ExampleDefaultDao {
   }
 
   createTrueEntityName(entityName) {
-
     if (entityName.endsWith('Dao')) {
       entityName = entityName.substring(0, entityName.length - 3);
     }
@@ -65,9 +63,14 @@ module.exports = class ExampleDefaultDao {
     let i = 0;
     let char = '';
     let outputEntityName = '';
-    while( i < entityName.length) {
+    while (i < entityName.length) {
       char = entityName.charAt(i);
-      if(char !== '_' && char === char.toUpperCase() && i > 0 && entityName.charAt(i - 1) !== '_') {
+      if (
+        char !== '_' &&
+        char === char.toUpperCase() &&
+        i > 0 &&
+        entityName.charAt(i - 1) !== '_'
+      ) {
         char = '_' + char;
       }
       outputEntityName += char.toLowerCase();
@@ -75,15 +78,15 @@ module.exports = class ExampleDefaultDao {
     }
     return outputEntityName;
   }
-  
+
   async getById(id) {
     return this.find({
-      [this.entityKey]: id
+      [this.entityKey]: id,
     });
   }
 
   async find(args, multiple = false, shallow = false) {
-    const findMethod = (multiple) ? 'filter' : 'find';
+    const findMethod = multiple ? 'filter' : 'find';
     return this.db[this.entityName][findMethod]((item) => {
       let match = true;
       for (let [key, value] of Object.entries(args)) {
@@ -123,5 +126,4 @@ module.exports = class ExampleDefaultDao {
   //     return result.get({ plain: true });
   //   });
   // }
-
-}
+};

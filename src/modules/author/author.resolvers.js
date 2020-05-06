@@ -7,5 +7,5 @@ module.exports = {
     id: async (parent) => {
       return parent.author_id;
     },
-  }
+  },
 };

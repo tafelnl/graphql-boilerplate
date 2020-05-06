@@ -26,6 +26,6 @@ module.exports = {
     },
     author: async (parent, ctx) => {
       return BookService.getAuthor(ctx, parent);
-    }
-  }
+    },
+  },
 };
