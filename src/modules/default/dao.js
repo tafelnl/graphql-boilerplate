@@ -42,10 +42,10 @@ const database = {
 };
 // source: https://thegreatestbooks.org/
 
-module.exports = class ExampleDefaultDao {
+module.exports = class DefaultDao {
   constructor() {
     let name = new.target.name;
-    if (new.target === ExampleDefaultDao) {
+    if (new.target === DefaultDao) {
       throw TypeError(`Cannot instantiate abstract class ${name}`);
     }
 

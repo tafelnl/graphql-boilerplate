@@ -1,3 +1,3 @@
-const ExampleDefaultDao = require('~/modules/exampleDefault/dao');
+const DefaultDao = require('~/modules/default/dao');
 
-module.exports = class AuthorDao extends ExampleDefaultDao {};
+module.exports = class AuthorDao extends DefaultDao {};
