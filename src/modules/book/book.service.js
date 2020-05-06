@@ -20,7 +20,7 @@ module.exports = class BookService {
   static async getAuthor(ctx, book) {
     // @QUESTION
     // how to guarantee that author_id is available here?
-    // since the parent data is nog guaranteed to have that available
+    // since the parent data is not guaranteed to have that available
     const author_id = book?.author_id;
     return AuthorService.get(ctx, author_id);
   }
