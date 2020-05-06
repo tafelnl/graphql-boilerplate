@@ -23,7 +23,7 @@ query {
 
 This query returns the one book that has `id: 1`.
 
-The corresponding author is returned by the resolver `Book.author` in [book.resolvers.js](src/modules/book.resolvers.js). But what if the resolver of `Book.book` does not return the required variables? How does one guarantee that this will happen?
+The corresponding author is returned by the resolver `Book.author` in [book.resolvers.js](src/modules/book/book.resolvers.js). But what if the resolver of `Book.book` does not return the required variables? How does one guarantee that this will happen?
 
 #### Answer
 
@@ -45,7 +45,7 @@ This query finds all books by searching authors with a name starting with the le
 
 But mind you that once you specify an author in the input. The code is currently limited so that once you search for an author it will immediately return all books for those authors without taking the other input into account.
 
-Also check the method `BookService.search` in [book.service.js](src/modules/book.service.js).
+Also check the method `BookService.search` in [book.service.js](src/modules/book/book.service.js).
 
 A architecural design change is needed to allow for this. It should also simultaneously work as efficient as possible. The current code use a plain and simple object as a database. But now imagine using sequalize to connect to a MySQL database for instance. How would you efficiently search by author then? Preferably without creating join queries etc.
 
