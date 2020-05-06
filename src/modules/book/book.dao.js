@@ -5,4 +5,9 @@ module.exports = class BookDao extends DefaultDao {
   async listByTitle(title) {
     return this.db.book.find({ title: title }, true, true);
   }
+  async listByAuthorIds(authorIds) {
+    return this.db.book.filter((item) => {
+      return authorIds.includes(item.author_id);
+    });
+  }
 };

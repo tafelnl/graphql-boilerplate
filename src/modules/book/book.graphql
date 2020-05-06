@@ -13,10 +13,7 @@ input BooksInput {
   ranking: Int
   stars: Int
   featured: Boolean
-  author_id: ID
-  # @QUESTION
-  # best way to search by author name?
-  # a join query for example seems ugly
+  author: AuthorsInput
 }
 
 extend type Query {
