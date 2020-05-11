@@ -21,6 +21,27 @@
 - `{domain}.resolvers.js` is meant to host the resolvers for the Queries, Mutations, Subscriptions and Model related to that specific domain.
 - `{domain}.service.js` acts as an abstraction for the `resolvers.js`. This way those methods can be easily used in other modules.
 
+### Examples
+
+#### Example queries
+
+```
+query {
+  books(input: { author: { name: "M" } }) {
+    id
+    title
+    ranking
+    stars
+    featured
+    shouldRead
+    author {
+      id
+      name
+    }
+  }
+}
+```
+
 ### Discussion
 
 - Use of a `{domain}.model.js` file.
