@@ -17,9 +17,11 @@
   "author": "Dutch Concepts",
   "dependencies": {
     "apollo-server-express": "^2.3.1",
+    "babel-plugin-root-import": "^6.5.0",
     "chalk": "^4.0.0",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
     "eslint-plugin-import": "^2.20.2",
     "express": "^4.17.1",
     "graphql-tools": "^5.0.0",
