@@ -1,5 +1,3 @@
-// const AuthorService = require('./author.service');
-
 export default {
   Query: {},
   Mutation: {},
