@@ -1,6 +1,6 @@
-const BookService = require('./book.service');
+import BookService from './book.service';
 
-module.exports = {
+export default {
   Query: {
     book: async (ctx, args) => {
       return BookService.get(ctx, args.id);

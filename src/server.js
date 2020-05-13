@@ -1,12 +1,13 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-const os = require('os');
-const chalk = require('chalk');
-const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
-const cors = require('cors');
+import os from 'os';
+import chalk from 'chalk';
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
+import cors from 'cors';
 
-const schema = require('./schema');
+import schema from './schema';
 
 const apolloServer = new ApolloServer({
   schema: schema,

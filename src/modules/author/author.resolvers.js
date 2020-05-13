@@ -1,6 +1,6 @@
 // const AuthorService = require('./author.service');
 
-module.exports = {
+export default {
   Query: {},
   Mutation: {},
   Author: {

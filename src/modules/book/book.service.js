@@ -1,7 +1,7 @@
-const BookDao = require('./book.dao');
-const AuthorService = require('../../modules/author/author.service');
+import BookDao from './book.dao';
+import AuthorService from '../../modules/author/author.service';
 
-module.exports = class BookService {
+export default class BookService {
   static async get(ctx, id) {
     const bookDao = new BookDao();
     return bookDao.getById(id);
@@ -37,4 +37,4 @@ module.exports = class BookService {
     const author_id = book?.author_id;
     return AuthorService.get(ctx, author_id);
   }
-};
+}

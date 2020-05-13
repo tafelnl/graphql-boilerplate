@@ -1,4 +1,4 @@
-module.exports = class Book {
+export default class Book {
   constructor(data) {
     this.data = data;
   }
@@ -20,4 +20,4 @@ module.exports = class Book {
     console.log(parent);
     return this.data?.bar;
   }
-};
+}

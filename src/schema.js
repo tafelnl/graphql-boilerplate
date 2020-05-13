@@ -1,9 +1,9 @@
-const chalk = require('chalk');
-const fs = require('fs');
-const { join } = require('path');
-const merge = require('lodash.merge');
-const { gql } = require('apollo-server-express');
-const { makeExecutableSchema } = require('graphql-tools');
+import chalk from 'chalk';
+import fs from 'fs';
+import { join } from 'path';
+import merge from 'lodash.merge';
+import { gql } from 'apollo-server-express';
+import { makeExecutableSchema } from 'graphql-tools';
 
 const defaultTypeDef = gql`
   type Query
@@ -37,7 +37,7 @@ fs.readdirSync(join(__dirname, modulesFolder)).forEach((folder) => {
           const typeDef = fs.readFileSync(path, 'utf-8');
           typeDefs.push(typeDef);
         } else {
-          const resolver = require(path);
+          const resolver = require(path).default;
           resolvers.push(resolver);
         }
         console.log('[GraphQL] Added ', file);
@@ -52,4 +52,4 @@ const schema = makeExecutableSchema({
 
 console.log(chalk.green('[GraphQL] Successfully generated executable schema'));
 
-module.exports = schema;
+export default schema;

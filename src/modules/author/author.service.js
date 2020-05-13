@@ -1,6 +1,6 @@
-const AuthorDao = require('./author.dao');
+import AuthorDao from './author.dao';
 
-module.exports = class AuthorService {
+export default class AuthorService {
   static async get(ctx, id) {
     const authorDao = new AuthorDao();
     return authorDao.getById(id);
@@ -10,4 +10,4 @@ module.exports = class AuthorService {
     const authorDao = new AuthorDao();
     return authorDao.find(input, true, true);
   }
-};
+}

@@ -40,9 +40,10 @@ const database = {
     },
   ],
 };
+
 // source: https://thegreatestbooks.org/
 
-module.exports = class DefaultDao {
+export default class DefaultDao {
   constructor() {
     let name = new.target.name;
     if (new.target === DefaultDao) {
@@ -128,4 +129,4 @@ module.exports = class DefaultDao {
   //     return result.get({ plain: true });
   //   });
   // }
-};
+}
