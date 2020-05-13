@@ -1,5 +1,5 @@
 const BookDao = require('./book.dao');
-const AuthorService = require('~/modules/author/author.service');
+const AuthorService = require('../../modules/author/author.service');
 
 module.exports = class BookService {
   static async get(ctx, id) {
