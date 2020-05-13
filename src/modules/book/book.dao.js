@@ -1,4 +1,4 @@
-import DefaultDao from '../../modules/default/dao';
+import DefaultDao from '~/src/modules/default/dao';
 
 export default class BookDao extends DefaultDao {
   // methods like the one below can be used to avoid repetitive code

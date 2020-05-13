@@ -1,5 +1,5 @@
 import BookDao from './book.dao';
-import AuthorService from '../../modules/author/author.service';
+import AuthorService from '~/src/modules/author/author.service';
 
 export default class BookService {
   static async get(ctx, id) {
