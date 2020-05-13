@@ -8,5 +8,5 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2020,
   },
-  extends: ['eslint:recommended', 'plugin:node/recommended'],
+  extends: ['eslint:recommended'],
 };
