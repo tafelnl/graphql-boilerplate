@@ -10,8 +10,7 @@
     "dev": "npm run format && nodemon src/server.js --ext js,graphql --exec \"npm run check && npm run lint && babel-node\"",
     "check": "prettier --check .",
     "format": "prettier --write .",
-    "lint": "eslint src/**/*.js",
-    "babel-node": "babel-node --presets=/*a*/"
+    "lint": "eslint src/**/*.js"
   },
   "keywords": [],
   "author": "Dutch Concepts",
