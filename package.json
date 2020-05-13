@@ -7,7 +7,6 @@
   "description": "Boilerplate for a GraphQL Apollo Server",
   "main": "src/server.js",
   "scripts": {
-    "postinstall": "link-module-alias",
     "dev": "npm run format && nodemon src/server.js --ext js,graphql --exec \"npm run check && npm run lint && babel-node\"",
     "check": "prettier --check .",
     "format": "prettier --write .",
@@ -33,11 +32,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-node": "^11.1.0",
-    "link-module-alias": "^1.2.0",
     "nodemon": "^1.18.9",
     "prettier": "2.0.5"
-  },
-  "_moduleAliases": {
-    "~": "src"
   }
 }
