@@ -19,7 +19,7 @@
   "keywords": [],
   "author": "Dutch Concepts",
   "dependencies": {
-    "apollo-server-express": "^2.3.1",
+    "apollo-server-express": "^2.14.2",
     "chalk": "^4.0.0",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
