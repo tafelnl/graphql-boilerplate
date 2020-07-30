@@ -20,7 +20,7 @@
   "author": "Dutch Concepts",
   "dependencies": {
     "apollo-server-express": "^2.14.2",
-    "chalk": "^4.0.0",
+    "chalk": "^4.1.0",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.17.1",
@@ -28,17 +28,17 @@
     "lodash.merge": "^4.6.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
     "babel-eslint": "^10.1.0",
     "babel-plugin-root-import": "^6.5.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.2",
     "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-plugin-import": "^2.22.0",
     "nodemon": "^1.18.9",
-    "prettier": "2.0.5",
-    "pm2": "3.5.1"
+    "pm2": "3.5.1",
+    "prettier": "2.0.5"
   }
 }
