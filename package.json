@@ -10,7 +10,7 @@
     "start": "pm2 start ecosystem.config.js",
     "start-docker": "pm2-runtime start ecosystem.config.js",
     "build": "npm run format && npm run lint && npm run clean && babel src/ -d dist/ --copy-files",
-    "dev": "npm run format && nodemon src/server.js --ext js,graphql --exec \"npm run check && npm run lint && babel-node\"",
+    "dev": "nodemon src/server.js --ext js,graphql --exec \"npm run lint && babel-node\"",
     "clean": "rm -rf dist && mkdir dist",
     "check": "prettier --check .",
     "format": "prettier --write .",
