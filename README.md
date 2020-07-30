@@ -16,6 +16,8 @@
 - [`babel-plugin-root-import`](https://github.com/entwicklerstube/babel-plugin-root-import#readme): Add the opportunity to import modules by the root path
 - [`nodemon`](https://github.com/remy/nodemon): for running development environment with hot reload
 - [`pm2`](https://github.com/Unitech/pm2): for running production environment [1]
+- [`husky`](https://github.com/typicode/husky): Git hooks made easy 🐶 woof!
+  - [`lint-staged`](https://github.com/okonet/lint-staged): 🚫💩 — Run linters on git staged files
 
 [1] pm2@3.5.1 to prevent problems with starting the server with `pm2-runtime`
 
